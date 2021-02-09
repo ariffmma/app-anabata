@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1069052807646",
+    "project_id": "anabata-c69f4",
+    "storage_bucket": "anabata-c69f4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1069052807646:android:0497cc0d9471396ef3f54f",
+        "android_client_info": {
+          "package_name": "com.anabata.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1069052807646-l5553ujosa782q3lgv4sft04o0f47n1l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgpSvFGlT4-VVwnk_oT2_e45EeoXjCMW8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1069052807646-l5553ujosa782q3lgv4sft04o0f47n1l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -55,6 +55,7 @@ class User {
     id = json['_id'];
     name = json['name'];
     username = json['username'];
+   
   }
 
   Map<String, dynamic> toLocalDatabaseMap() {
@@ -62,7 +63,7 @@ class User {
     map['_id'] = id;
     map['name'] = name;
     map['username'] = username;
-
+ 
     return map;
   }
 

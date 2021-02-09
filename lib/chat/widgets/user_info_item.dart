@@ -3,10 +3,20 @@ import 'package:flutter/material.dart';
 class UserInfoItem extends StatelessWidget {
   final String name;
   final String subtitle;
+  final String company;
+  final String email;
+  final String phone;
+  final String age;
+  final String domicile;
 
   UserInfoItem({
     @required this.name,
     this.subtitle,
+    this.company,
+    this.email,
+    this.phone,
+    this.age,
+    this.domicile,
   });
 
   @override
@@ -33,7 +43,10 @@ class UserInfoItem extends StatelessWidget {
             radius: 25,
             child: Text(
               name[0],
-              style: TextStyle(color: Colors.white, fontSize: 18),
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 18,
+              ),
             ),
           ),
           Expanded(
@@ -59,6 +72,45 @@ class UserInfoItem extends StatelessWidget {
                       color: Colors.black,
                       fontSize: 14,
                     ),
+                  ),
+                  Text(
+                    company,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 14,
+                    ),
+                  ),
+                  Text(
+                    email,
+                    textAlign: TextAlign.right,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 14,
+                    ),
+                  ),
+                  Text(
+                    phone,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 14,
+                    ),
+                  ),
+                  Text(
+                    age,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 14,
+                    ),
+                  ),
+                  Text(
+                    domicile,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 14,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 5,
                   ),
                 ],
               ),

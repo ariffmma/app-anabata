@@ -75,7 +75,12 @@ class _SettingsScreenState extends State<Profil> {
     if (_settingsController.myUser != null) {
       return UserInfoItem(
         name: _settingsController.myUser.name,
-        subtitle: "@${_settingsController.myUser.username}",
+        subtitle: "username_ @${_settingsController.myUser.username}",
+        company: "Company_ ${_settingsController.myUser.company}",
+        email: "Email_ ${_settingsController.myUser.email}",
+        phone: "Phone_ ${_settingsController.myUser.phone}",
+        age: "Age_ ${_settingsController.myUser.age}",
+        domicile: "Domicile_ ${_settingsController.myUser.domicile}",
       );
     }
     return Container();

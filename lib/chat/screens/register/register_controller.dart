@@ -101,7 +101,7 @@ class RegisterController extends StateControl {
     Widget okButton = FlatButton(
       child: Text("OK"),
       onPressed: () {
-        Navigator.pop(context);
+        Navigator.of(context, rootNavigator: true).pop();
       },
     );
     // configura o  AlertDialog

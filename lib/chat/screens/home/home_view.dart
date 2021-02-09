@@ -21,7 +21,7 @@ import 'package:blogapp/chat/widgets/settings_item.dart';
 import 'package:blogapp/chat/widgets/user_info_item.dart';
 import 'package:blogapp/screen/home_statis/home_statis.dart';
 import 'package:blogapp/chat/screens/home/main.dart';
-import 'package:blogapp/chat/screens/home/child/profile.dart';
+import 'package:blogapp/chat/screens/home/profile.dart';
 
 class HomeScreen extends StatefulWidget {
   static final String routeName = "/home";
@@ -134,7 +134,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           iconSize: 25,
                         ),
                         IconButton(
-                          icon: Icon(MaterialIcons.cast_connected),
+                          icon: Icon(MaterialCommunityIcons.android_messages),
                           color:
                               currentState == 1 ? Colors.white : Colors.white54,
                           onPressed: () {
@@ -167,7 +167,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           iconSize: 25,
                         ),
                         IconButton(
-                          icon: Icon(Ionicons.ios_person),
+                          icon: Icon(Icons.settings),
                           color:
                               currentState == 4 ? Colors.white : Colors.white54,
                           onPressed: () {
@@ -184,14 +184,14 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               body: widgets[currentState],
-              floatingActionButton: FloatingActionButton(
-                onPressed: _homeController.openAddChatScreen,
-                backgroundColor: Colors.grey,
-                child: Icon(
-                  MaterialIcons.message,
-                  color: Theme.of(context).accentColor,
-                ),
-              ),
+              //   floatingActionButton: FloatingActionButton(
+              //     onPressed: _homeController.openAddChatScreen,
+              //     backgroundColor: Colors.grey,
+              //    child: Icon(
+              //      MaterialIcons.message,
+              //      color: Theme.of(context).accentColor,
+              //     ),
+              //   ),
             );
           },
         );

@@ -7,7 +7,7 @@ import 'package:blogapp/chat/widgets/user_card.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
-import 'package:blogapp/chat/screens/home/child/profile.dart';
+import 'package:blogapp/chat/screens/home/profile.dart';
 
 class Chat extends StatefulWidget {
   @override
@@ -71,7 +71,7 @@ class _ChatState extends State<Chat> {
               child: Row(
                 children: <Widget>[
                   Text(
-                    'ANBT',
+                    'A.',
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                   ),
                   Spacer(),
@@ -95,6 +95,15 @@ class _ChatState extends State<Chat> {
               ),
             ),
           ]),
+          floatingActionButton: FloatingActionButton(
+            onPressed: _homeController.openAddChatScreen,
+            //backgroundColor: Colors.grey,
+            child: Icon(
+              Ionicons.ios_add, size: 30,
+              //color: Theme.of(context).accentColor,
+            ),
+          ),
+          //    floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
         );
       },
     );

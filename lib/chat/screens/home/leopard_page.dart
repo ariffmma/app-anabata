@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:blogapp/chat/screens/home/main_page.dart';
 import 'package:blogapp/chat/screens/home/styles.dart';
+import 'package:blogapp/zoom/signin_zoom.dart';
 
 class LeopardPage extends StatelessWidget {
   @override
@@ -59,12 +60,18 @@ class TravelDescriptionLabel extends StatelessWidget {
         );
       },
       child: Padding(
-        padding: const EdgeInsets.only(left: 24),
-        child: Text(
-          'About Us',
-          style: TextStyle(fontSize: 18),
-        ),
-      ),
+          padding: const EdgeInsets.only(left: 24),
+          child: TextButton(
+              child: Text(
+                'Zoom',
+                style: TextStyle(fontSize: 18, color: Colors.white),
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SignInZoom()),
+                );
+              })),
     );
   }
 }
@@ -82,7 +89,7 @@ class LeopardDescription extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24),
         child: Text(
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, ',
+          '',
           style: TextStyle(fontSize: 13, color: lightGrey),
         ),
       ),

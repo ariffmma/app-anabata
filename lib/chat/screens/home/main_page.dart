@@ -5,10 +5,10 @@ import 'package:provider/provider.dart';
 import 'package:blogapp/chat/screens/home/leopard_page.dart';
 import 'package:blogapp/chat/screens/home/styles.dart';
 import 'package:flutter_icons/flutter_icons.dart';
-import 'package:blogapp/chat/screens/home/child/profile.dart';
-import 'package:blogapp/chat/screens/home/child/otes/otes.dart';
+import 'package:blogapp/chat/screens/home/profile.dart';
+import 'package:blogapp/daftar/form/name.dart';
 import 'package:blogapp/chat/screens/home/child/hit.dart';
-import 'package:blogapp/chat/screens/home/child/collabs.dart';
+import 'package:blogapp/zoom/signin_zoom.dart';
 
 class PageOffsetNotifier with ChangeNotifier {
   double _offset = 0;
@@ -137,7 +137,9 @@ class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
                         ArrowIcon(),
                         TravelDetailsLabel(),
                         DistanceLabel(),
+                        //garis tengah
                         VerticalTravelDots(),
+                        //list komentar
                         VultureIconLabel(),
                         // Positioned(
                         //   right: 20,
@@ -203,10 +205,10 @@ class VultureImage extends StatelessWidget {
         child: IgnorePointer(
           child: Padding(
             padding: const EdgeInsets.only(bottom: 90.0),
-            child: Image.asset(
-              'assets/anabata2.png',
-              height: MediaQuery.of(context).size.height / 3,
-            ),
+            //    child: Image.asset(
+            //   'assets/anabata2.png',
+            //   height: MediaQuery.of(context).size.height / 3,
+            //  ),
           ),
         ),
       ),
@@ -220,29 +222,27 @@ class AppBar extends StatelessWidget {
       context: context,
       builder: (BuildContext context) {
         return Container(
+          color: Colors.black,
           height: 300,
           child: TextButton(
               child: Positioned(
                 left: 100,
                 top: 100,
                 child: Text(
-                  'Welcome!',
+                  'Register OTeS #7',
                   textAlign: TextAlign.left,
                   style: TextStyle(
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
-                  ),
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white),
                 ),
               ),
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Profil()),
+                  MaterialPageRoute(builder: (context) => MyHomePage()),
                 );
               }),
-          decoration: BoxDecoration(
-            color: Colors.black87,
-          ),
         );
       },
     );
@@ -259,15 +259,17 @@ class AppBar extends StatelessWidget {
         child: Row(
           children: <Widget>[
             Text(
-              'ANBT',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+              'A.',
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 35),
             ),
             Spacer(),
             IconButton(
               icon: Icon(MaterialIcons.menu),
               onPressed: () {
-                _showModalBottomSheet(context);
-                // Navigator.of(context).pushNamed(SettingsScreen.routeName);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Profil()),
+                );
               },
             ),
           ],
@@ -394,7 +396,7 @@ class DistanceLabel extends StatelessWidget {
       child: MapHider(
         child: Center(
           child: Text(
-            'Lorem',
+            '----------',
             style: TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.bold,
@@ -514,6 +516,7 @@ class VerticalTravelDots extends StatelessWidget {
   }
 }
 
+// list komentar
 class VultureIconLabel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -551,29 +554,6 @@ class VultureIconLabel extends StatelessWidget {
   }
 }
 
-class MapVultures extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Consumer<MapAnimationNotifier>(
-      builder: (context, notifier, child) {
-        double opacity = math.max(0, 4 * (notifier.value - 3 / 4));
-        return Positioned(
-          top: topMargin(context) + 32 + 16 + 4 + 2 * oneThird(context),
-          right: 50,
-          child: Opacity(
-            opacity: opacity,
-            child: child,
-          ),
-        );
-      },
-      child: SmallAnimalIconLabel(
-        isVulture: true,
-        showLine: false,
-      ),
-    );
-  }
-}
-
 class SmallAnimalIconLabel extends StatelessWidget {
   final bool isVulture;
   final bool showLine;
@@ -599,7 +579,7 @@ class SmallAnimalIconLabel extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => OTeS()),
+                    MaterialPageRoute(builder: (context) => MyHomePage()),
                   );
                 }),
             SizedBox(height: showLine ? 60 : 0),
@@ -625,7 +605,7 @@ class SmallAnimalIconLabel extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Collabs()),
+                    MaterialPageRoute(builder: (context) => SignInZoom()),
                   );
                 })
           ],

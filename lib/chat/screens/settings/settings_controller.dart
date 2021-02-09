@@ -50,7 +50,7 @@ class SettingsController extends StateControl {
       FlatButton(
         child: Text(Platform.isIOS ? 'Cancel' : 'CANCEL'),
         onPressed: () {
-          Navigator.pop(context);
+          Navigator.of(context, rootNavigator: true).pop();
         },
       ),
       FlatButton(
@@ -59,7 +59,7 @@ class SettingsController extends StateControl {
           style: TextStyle(color: Platform.isIOS ? Colors.red : Colors.blue),
         ),
         onPressed: () {
-          Navigator.pop(context);
+          Navigator.of(context, rootNavigator: true).pop();
           deleteChats();
         },
       ),
@@ -75,7 +75,7 @@ class SettingsController extends StateControl {
       FlatButton(
         child: Text(Platform.isIOS ? 'Ok' : 'OK'),
         onPressed: () {
-          Navigator.pop(context);
+          Navigator.of(context, rootNavigator: true).pop();
         },
       ),
     ];
@@ -90,7 +90,7 @@ class SettingsController extends StateControl {
       FlatButton(
         child: Text(Platform.isIOS ? 'Cancel' : 'CANCEL'),
         onPressed: () {
-          Navigator.pop(context);
+          Navigator.of(context, rootNavigator: true).pop();
         },
       ),
       FlatButton(
@@ -99,7 +99,8 @@ class SettingsController extends StateControl {
           style: TextStyle(color: Platform.isIOS ? Colors.red : Colors.blue),
         ),
         onPressed: () {
-          Navigator.pop(context);
+          Navigator.of(context, rootNavigator: true).pop();
+          // Navigator.pop(context);
           logout();
         },
       ),
